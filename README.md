@@ -2,4 +2,5 @@
 UI for holoport manager app
 
 [screen]: img/ui.jpg "screenshot"
-![sreenshot][screen]
+
+![screenshot][screen]
