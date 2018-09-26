@@ -32,7 +32,7 @@ export const fuseNavigationConfig = [
                 'title': 'FAQ',
                 'type' : 'item',
                 'icon' : 'memory',
-                'url'  : '/test'
+                'url'  : '/faq'
             },
             {
                 'id'   : 'support-chat',
