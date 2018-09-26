@@ -57,9 +57,6 @@ ReactDOM.render(
                                         <QuickPanel/>
                                     </React.Fragment>
                                 }
-                                contentWrapper={
-                                    <SettingsPanel/>
-                                }
                             >
                             </FuseLayout>
                         </FuseTheme>
@@ -71,3 +68,9 @@ ReactDOM.render(
     , document.getElementById('root'));
 
 registerServiceWorker();
+
+/*
+contentWrapper={
+    <SettingsPanel/>
+}
+*/
