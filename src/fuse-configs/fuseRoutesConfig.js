@@ -1,20 +1,24 @@
 import React from 'react';
 import {Redirect} from 'react-router-dom';
 import {FuseUtils} from '@fuse/index';
+//import {appsConfigs} from 'main/content/apps/appsConfigs';
+//import {pagesConfigs} from 'main/content/pages/pagesConfigs';
 import {ExampleConfig} from 'main/content/example/ExampleConfig';
-import {TestConfig} from 'main/content/test/TestConfig';
-import {FaqPageConfig} from 'main/content/faq/FaqPageConfig';
+import {IntroConfig} from 'main/content/intro/IntroConfig';
+import {FaqPageConfig} from 'main/content/pages/faq/FaqPageConfig';
+import {KnowledgeBasePageConfig} from 'main/content/pages/knowledge-base/KnowledgeBaseConfig';
 
 const routeConfigs = [
     ExampleConfig,
-    TestConfig,
-    FaqPageConfig
+    IntroConfig,
+    FaqPageConfig,
+    KnowledgeBasePageConfig
 ];
 
 export const routes = [
     ...FuseUtils.generateRoutesFromConfigs(routeConfigs),
     {
         path     : '/',
-        component: () => <Redirect to="/example"/>
+        component: () => <Redirect to="/introduction"/>
     }
 ];

@@ -6,7 +6,7 @@ const styles = theme => ({
     layoutRoot: {}
 });
 
-class Test extends Component {
+class Intro extends Component {
 
     render()
     {
@@ -34,4 +34,4 @@ class Test extends Component {
     }
 }
 
-export default withStyles(styles, {withTheme: true})(Test);
+export default withStyles(styles, {withTheme: true})(Intro);

@@ -8,7 +8,7 @@ export const ExampleConfig = {
     },
     routes  : [
         {
-            path     : '/example',
+            path     : '/dashboard',
             component: Example
         }
     ]

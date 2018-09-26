@@ -1,6 +1,6 @@
-import Test from './Test';
+import Intro from './Intro';
 
-export const TestConfig = {
+export const IntroConfig = {
     settings: {
         layout: {
             config: {}
@@ -8,8 +8,8 @@ export const TestConfig = {
     },
     routes  : [
         {
-            path     : '/test',
-            component: Test
+            path     : '/intro',
+            component: Intro
         }
     ]
 };
