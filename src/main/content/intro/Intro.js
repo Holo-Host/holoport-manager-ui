@@ -11,19 +11,23 @@ class Intro extends Component {
 
     state = {
         data      : [],
+        kb      : [],
     };
 
     componentDidMount()
     {
-        axios.get('/api/knowledge-base').then(res => {
+        axios.get('http://localhost:8000').then(res => {
             this.setState({data: res.data});
+        });
+        axios.get('/api/knowledge-base').then(res => {
+            this.setState({kb: res.data});
         });
     }
 
     render()
     {
         const {classes} = this.props;
-        const {data} = this.state;
+        const {data, kb} = this.state;
 
         return (
             <FusePageSimple
@@ -42,6 +46,11 @@ class Intro extends Component {
                         <p>
                             Oh look, you have a HoloPort!
                         </p>
+                        {kb.map((category) => (
+                            <p>
+                                {category.title}
+                            </p>
+                        ))}
                         {data.map((category) => (
                             <p>
                                 {category.title}
