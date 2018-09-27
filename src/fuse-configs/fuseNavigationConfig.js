@@ -12,15 +12,13 @@ export const fuseNavigationConfig = [
                 'icon' : 'memory',
                 'url'  : '/intro'
             },
-            /*
             {
                 'id'   : 'health-dashboard',
                 'title': 'Dashboard',
                 'type' : 'item',
                 'icon' : 'dashboard',
-                'url'  : '/apps/dashboards/analytics'
+                'url'  : '/'
             }
-            */
         ]
     },
     {
