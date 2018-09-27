@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {withStyles} from '@material-ui/core/styles/index';
-import {Button, Card, CardContent, Divider, FormControl, Input, InputLabel, Typography} from '@material-ui/core';
+import {Card, CardContent, Typography} from '@material-ui/core';
 import classNames from 'classnames';
 import _ from 'lodash';
 import {FuseCountdown, FuseAnimate} from '@fuse';
@@ -25,18 +25,9 @@ class ComingSoonPage extends Component {
         this.setState(_.set({...this.state}, event.target.name, event.target.type === 'checkbox' ? event.target.checked : event.target.value));
     };
 
-    canBeSubmitted()
-    {
-        const {email} = this.state;
-        return (
-            email.length > 0
-        );
-    }
-
     render()
     {
         const {classes} = this.props;
-        const {email} = this.state;
 
         return (
             <div className={classNames(classes.root, "flex flex-col flex-auto flex-no-shrink items-center justify-center p-32")}>
