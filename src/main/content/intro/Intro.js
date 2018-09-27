@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {withStyles} from '@material-ui/core/styles';
-import {FusePageSimple, DemoContent} from '@fuse';
+import {FusePageSimple} from '@fuse';
 
 const styles = theme => ({
     layoutRoot: {}
@@ -26,7 +26,7 @@ class Intro extends Component {
                     <div className="p-24">
                         <h4>Content</h4>
                         <br/>
-                        <DemoContent/>
+                        Oh look, you have a HoloPort!
                     </div>
                 }
             />

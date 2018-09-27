@@ -5,7 +5,7 @@ const initialState = {
     data: {
         'displayName': 'John Doe',
         'photoURL'   : 'assets/images/avatars/Velazquez.jpg',
-        'email'      : 'johndoe@withinpixels.com',
+        'email'      : 'johndoe@somewhere.com',
         shortcuts    : [
             'calendar',
             'mail',

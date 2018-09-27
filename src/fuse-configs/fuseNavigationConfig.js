@@ -12,6 +12,7 @@ export const fuseNavigationConfig = [
                 'icon' : 'memory',
                 'url'  : '/intro'
             },
+            /*
             {
                 'id'   : 'health-dashboard',
                 'title': 'Dashboard',
@@ -19,6 +20,7 @@ export const fuseNavigationConfig = [
                 'icon' : 'dashboard',
                 'url'  : '/apps/dashboards/analytics'
             }
+            */
         ]
     },
     {
@@ -40,7 +42,8 @@ export const fuseNavigationConfig = [
                 'type' : 'item',
                 'icon' : 'import_contacts',
                 'url'  : '/pages/knowledge-base'
-            },
+            }
+            /*
             {
                 'id'   : 'support-chat',
                 'title': 'Chat',
@@ -53,7 +56,20 @@ export const fuseNavigationConfig = [
                     'fg'   : '#FFFFFF'
                 }
             }
+            */
         ]
+    },
+    {
+        'id'      : 'security',
+        'title'   : 'Security',
+        'type'    : 'group',
+        'icon'    : 'details',
+    },
+    {
+        'id'      : 'hchc',
+        'title'   : 'HCHC',
+        'type'    : 'group',
+        'icon'    : 'details',
     }
 
 ];

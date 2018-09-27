@@ -1,7 +1,6 @@
 import React from 'react';
 //import React, {Component} from 'react';
 import {withStyles} from '@material-ui/core/styles';
-//import {FusePageSimple, DemoContent} from '@fuse';
 
 import PropTypes from 'prop-types';
 import Table from '@material-ui/core/Table';

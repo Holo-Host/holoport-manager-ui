@@ -11,10 +11,6 @@ import Widget2 from './widgets/Widget2';
 import Widget3 from './widgets/Widget3';
 import Widget4 from './widgets/Widget4';
 import Widget5 from './widgets/Widget5';
-import Widget6 from './widgets/Widget6';
-import Widget7 from './widgets/Widget7';
-import Widget8 from './widgets/Widget8';
-import Widget9 from './widgets/Widget9';
 import {FuseAnimate} from '@fuse';
 
 const styles = theme => ({
@@ -139,9 +135,6 @@ class AnalyticsDashboardApp extends Component {
                                 <Widget5 data={widgets.widget5}/>
                             </div>
 
-                            <div className="widget w-full p-16 pb-32">
-                                <Widget6 data={widgets.widget6}/>
-                            </div>
                         </div>
 
                         <div className="flex flex-wrap w-full md:w-320 pt-16">
@@ -153,9 +146,6 @@ class AnalyticsDashboardApp extends Component {
                                     </Typography>
                                 </FuseAnimate>
 
-                                <div className="widget w-full p-16">
-                                    <Widget7 data={widgets.widget7}/>
-                                </div>
                             </div>
 
                             <div className="mb-32 w-full sm:w-1/2 md:w-full">
@@ -166,9 +156,6 @@ class AnalyticsDashboardApp extends Component {
                                     </div>
                                 </FuseAnimate>
 
-                                <div className="widget w-full p-16">
-                                    <Widget8 data={widgets.widget8}/>
-                                </div>
                             </div>
 
                             <div className="mb-32 w-full sm:w-1/2 md:w-full">
@@ -177,9 +164,6 @@ class AnalyticsDashboardApp extends Component {
                                         What are your top campaigns?
                                     </Typography>
                                 </FuseAnimate>
-                                <div className="widget w-full p-16">
-                                    <Widget9 data={widgets.widget9}/>
-                                </div>
                             </div>
                         </div>
                     </div>
