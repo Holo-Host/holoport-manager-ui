@@ -17,7 +17,7 @@ export const fuseNavigationConfig = [
                 'title': 'Dashboard',
                 'type' : 'item',
                 'icon' : 'dashboard',
-                'url'  : '/dashboard'
+                'url'  : '/apps/dashboards/analytics'
             }
         ]
     },

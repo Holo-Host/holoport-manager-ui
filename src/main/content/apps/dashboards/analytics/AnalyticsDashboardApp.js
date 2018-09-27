@@ -139,12 +139,6 @@ class AnalyticsDashboardApp extends Component {
                                 <Widget5 data={widgets.widget5}/>
                             </div>
 
-                            <FuseAnimate delay={600}>
-                                <Typography className="px-16 pb-8 text-18 font-300">
-                                    Where are your users?
-                                </Typography>
-                            </FuseAnimate>
-
                             <div className="widget w-full p-16 pb-32">
                                 <Widget6 data={widgets.widget6}/>
                             </div>

@@ -22,8 +22,6 @@ import MainFooter from './main/MainFooter';
 import jssExtend from 'jss-extend'
 import QuickPanel from 'main/quickPanel/QuickPanel';
 import store from 'store';
-import SettingsPanel from 'main/SettingsPanel';
-import ChatPanel from 'main/chatPanel/ChatPanel';
 import {Auth} from 'auth';
 
 const jss = create({
