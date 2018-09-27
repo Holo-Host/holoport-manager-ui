@@ -9,9 +9,13 @@ const styles = theme => ({
 
 class Intro extends Component {
 
+    state = {
+        data      : [],
+    };
+
     componentDidMount()
     {
-        axios.get('/api/knowledge-bases').then(res => {
+        axios.get('/api/knowledge-base').then(res => {
             this.setState({data: res.data});
         });
     }
@@ -19,6 +23,8 @@ class Intro extends Component {
     render()
     {
         const {classes} = this.props;
+        const {data} = this.state;
+
         return (
             <FusePageSimple
                 classes={{
@@ -33,8 +39,14 @@ class Intro extends Component {
                 content={
                     <div className="p-24">
                         <img className="w-128 m-32" src="assets/images/logos/holo-logo.png" alt="logo"/>
-                        <br/>
-                        Oh look, you have a HoloPort!
+                        <p>
+                            Oh look, you have a HoloPort!
+                        </p>
+                        {data.map((category) => (
+                            <p>
+                                {category.title}
+                            </p>
+                        ))}
                     </div>
                 }
             />
