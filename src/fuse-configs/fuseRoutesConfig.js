@@ -22,6 +22,6 @@ export const routes = [
     {
         path     : '/',
         exact    : true,
-        component: () => <Redirect to="/intro"/>
+        component: () => <Redirect to="/pages/coming-soon"/>
     }
 ];

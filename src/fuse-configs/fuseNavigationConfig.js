@@ -17,7 +17,7 @@ export const fuseNavigationConfig = [
                 'title': 'Dashboard',
                 'type' : 'item',
                 'icon' : 'dashboard',
-                'url'  : '/'
+                'url'  : '/intro'
             }
         ]
     },
@@ -40,7 +40,7 @@ export const fuseNavigationConfig = [
                 'type' : 'item',
                 'icon' : 'import_contacts',
                 'url'  : '/pages/knowledge-base'
-            }
+            },
             /*
             {
                 'id'   : 'support-chat',
@@ -55,6 +55,13 @@ export const fuseNavigationConfig = [
                 }
             }
             */
+            {
+                'id'   : 'coming-soon',
+                'title': 'Coming Soon',
+                'type' : 'item',
+                'icon' : 'alarm',
+                'url'  : '/pages/coming-soon'
+            },
         ]
     },
     {
