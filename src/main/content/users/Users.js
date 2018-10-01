@@ -7,7 +7,7 @@ const styles = theme => ({
     layoutRoot: {}
 });
 
-class Intro extends Component {
+class Users extends Component {
 
     state = {
         data      : [],
@@ -37,14 +37,22 @@ class Intro extends Component {
                     <div className="p-24"><h4>Holo</h4></div>
                 }
                 contentToolbar={
-                    <div className="px-24"><h4>Content Toolbar</h4></div>
+                    <div className="px-24"><h4>Users</h4></div>
                 }
                 content={
                     <div className="p-24">
-                        <img className="w-128 m-32" src="assets/images/logos/holo-logo.png" alt="logo"/>
                         <p>
-                            Oh look, you have a HoloPort!
+                            These are the users currently configured on your Holoport:
                         </p>
+                        <ul>
+                        {data.map((user, index) => (
+                            // Only do this if items have no stable IDs
+                            <li key={index}>
+                              {user.username}
+                            </li>
+                        ))}
+                        </ul>
+
                     </div>
                 }
             />
@@ -52,4 +60,4 @@ class Intro extends Component {
     }
 }
 
-export default withStyles(styles, {withTheme: true})(Intro);
+export default withStyles(styles, {withTheme: true})(Users);

@@ -1,23 +1,30 @@
 export const fuseNavigationConfig = [
     {
-        'id'      : 'health',
-        'title'   : 'Health',
+        'id'      : 'Management',
+        'title'   : 'Management',
         'type'    : 'group',
         'icon'    : 'details',
         'children': [
             {
-                'id'   : 'health-intro',
+                'id'   : 'intro',
                 'title': 'Introduction',
                 'type' : 'item',
                 'icon' : 'memory',
                 'url'  : '/intro'
             },
             {
-                'id'   : 'health-dashboard',
-                'title': 'Dashboard',
+                'id'   : 'health',
+                'title': 'Health',
                 'type' : 'item',
                 'icon' : 'dashboard',
                 'url'  : '/intro'
+            },
+            {
+                'id'   : 'users',
+                'title': 'Users',
+                'type' : 'item',
+                'icon' : 'users',
+                'url'  : '/users'
             }
         ]
     },
