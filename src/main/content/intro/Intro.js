@@ -46,14 +46,17 @@ class Intro extends Component {
                             Oh look, you have a HoloPort!
                         </p>
                         <br/>
-                        <p>
-                            <h3>Users</h3>
-                        </p>
-                        {data.map((user) => (
-                            <p>
-                                {user.username}
-                            </p>
+                        <h3>Users</h3>
+                        <br/>
+                        <ul>
+                        {data.map((user, index) => (
+                            // Only do this if items have no stable IDs
+                            <li key={index}>
+                              {user.username}
+                            </li>
                         ))}
+                        </ul>
+
                     </div>
                 }
             />
