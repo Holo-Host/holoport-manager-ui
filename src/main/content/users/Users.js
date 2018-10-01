@@ -18,9 +18,6 @@ class Users extends Component {
         axios.get('http://localhost:8000/users/').then(res => {
             this.setState({data: res.data});
         });
-        axios.get('/api/knowledge-base').then(res => {
-            this.setState({kb: res.data});
-        });
     }
 
     render()
