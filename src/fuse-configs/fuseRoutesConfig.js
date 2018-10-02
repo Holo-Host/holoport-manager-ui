@@ -8,10 +8,12 @@ import {IntroConfig} from 'main/content/intro/IntroConfig';
 import {UsersConfig} from 'main/content/users/UsersConfig';
 import {FaqPageConfig} from 'main/content/pages/faq/FaqPageConfig';
 import {KnowledgeBasePageConfig} from 'main/content/pages/knowledge-base/KnowledgeBaseConfig';
+import {ComponentsConfig} from 'main/content/components/ComponentsConfig';
 
 const routeConfigs = [
     ...appsConfigs,
     ...pagesConfigs,
+    ComponentsConfig,
     ExampleConfig,
     IntroConfig,
     UsersConfig,

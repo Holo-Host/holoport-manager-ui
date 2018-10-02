@@ -45,11 +45,10 @@ class Users extends Component {
                         {data.map((user, index) => (
                             // Only do this if items have no stable IDs
                             <li key={index}>
-                              {user.username}
+                                {user.username} {user.email}
                             </li>
                         ))}
                         </ul>
-
                     </div>
                 }
             />

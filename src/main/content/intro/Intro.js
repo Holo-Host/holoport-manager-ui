@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import {withStyles} from '@material-ui/core/styles';
-import axios from 'axios/index';
 import {FusePageSimple} from '@fuse';
 
 const styles = theme => ({
@@ -9,24 +8,9 @@ const styles = theme => ({
 
 class Intro extends Component {
 
-    state = {
-        data      : [],
-    };
-
-    componentDidMount()
-    {
-        axios.get('http://localhost:8000/users/').then(res => {
-            this.setState({data: res.data});
-        });
-        axios.get('/api/knowledge-base').then(res => {
-            this.setState({kb: res.data});
-        });
-    }
-
     render()
     {
         const {classes} = this.props;
-        const {data} = this.state;
 
         return (
             <FusePageSimple

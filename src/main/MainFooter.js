@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Icon, IconButton, Tooltip} from '@material-ui/core';
+import {IconButton, Tooltip} from '@material-ui/core';
 import {withStyles} from '@material-ui/core/styles/index';
 import {FuseAnimateGroup} from '@fuse';
 import classNames from 'classnames';
