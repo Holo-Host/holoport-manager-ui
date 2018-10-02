@@ -17,7 +17,12 @@ export const fuseNavigationConfig = [
                 'title': 'Health',
                 'type' : 'item',
                 'icon' : 'dashboard',
-                'url'  : '/intro'
+                'url'  : '/intro',
+                'badge': {
+                    'title': 3,
+                    'bg'   : '#F44336',
+                    'fg'   : '#FFFFFF'
+                }
             },
             {
                 'id'   : 'users',
