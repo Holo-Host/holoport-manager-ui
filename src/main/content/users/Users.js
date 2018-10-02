@@ -45,7 +45,7 @@ class Users extends Component {
                         {data.map((user, index) => (
                             // Only do this if items have no stable IDs
                             <li key={index}>
-                                {user.username} {user.email}
+                                <strong>{user.username}</strong>: <em>{user.email}</em>
                             </li>
                         ))}
                         </ul>
