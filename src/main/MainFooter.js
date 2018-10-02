@@ -13,7 +13,7 @@ function MainFooter({classes})
     return (
         <div className={classNames(classes.root, "flex flex-1 items-center px-16")}>
             <div className="flex flex-1">
-                <div class="logo">
+                <div className="logo">
                     <img width="64" src="assets/images/logos/holo-logo.png" alt="logo"/>
                 </div>
             </div>
