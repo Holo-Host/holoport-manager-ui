@@ -51,36 +51,19 @@ class System extends Component {
 
     onSubmit = (model) => {
         console.info('submit', model);
-        console.log(model);
         axios.get('/api/sys/' + model.command).then(res => {
             console.log(res.data);
             this.setState({commandResult: res.data});
         });
-//        setInterval(function(){ alert("Hello"); }, 3000);
+        setTimeout(function(){ alert("Hello"); }, 1000);
     };
 
     render()
     {
-        const {classes} = this.props;
         const {data} = this.state;
         const {canSubmit} = this.state;
         const {commandResult} = this.state;
-        const styles = {
-          card: {
-            minWidth: 275
-          },
-          title: {
-            marginBottom: 16,
-            fontSize: 14,
-          },
-          pos: {
-            marginBottom: 12,
-          },
-          header: {
-              height: 60,
-              minHeight: 60
-          }
-        };
+        const {classes} = this.props;
 
         return (
             <FusePageSimple
@@ -139,8 +122,6 @@ class System extends Component {
                                 label="Command"
                                 validations={{
                                     isIn: function (values, value) {
-                                      values, // ?
-                                      value; // 5
                                       let arr = ['success','fail'];
                                       if ((arr.indexOf(value) && arr.indexOf(value) !== -1) || !arr.indexOf(value)){
                                           return true;
