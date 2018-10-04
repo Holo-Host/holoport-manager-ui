@@ -32,16 +32,3 @@ mock.onGet('/api/sys/success').reply((config) => {
 mock.onGet('/api/sys/fail').reply((config) => {
     return [200, fail];
 });
-
-mock.onPost('/api/sys/command').reply((request) => {
-    console.log(request);
-//    const command = JSON.parse(request);
-
-    if((request) === 'success'){
-        return [200, success];
-    }
-
-    if((request) === 'fail'){
-        return [200, fail];
-    }
-});
