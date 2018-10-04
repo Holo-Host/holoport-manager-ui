@@ -51,11 +51,20 @@ class System extends Component {
 
     onSubmit = (model) => {
         console.info('submit', model);
-        axios.get('/api/sys/' + model.command).then(res => {
+
+        let delay = (time) => (result) => new Promise(resolve => setTimeout(() => resolve(result), time));
+
+        axios.get('/api/sys/queue').then(res => {
             console.log(res.data);
             this.setState({commandResult: res.data});
+        })
+        .then(delay(3000))
+        .then(res => {
+            axios.get('/api/sys/' + model.command).then(res => {
+                console.log(res.data);
+                this.setState({commandResult: res.data});
+            });
         });
-        setTimeout(function(){ alert("Hello"); }, 1000);
     };
 
     render()
@@ -135,7 +144,13 @@ class System extends Component {
                                 }}
                                 required
                             />
-                        <Chip label={commandResult} className={classes.chip} />
+
+                            <Chip
+                                label={commandResult}
+                                className={classes.chip}
+                                color="secondary"
+                              />
+
                             <br/>
 
                             <Button
