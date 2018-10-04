@@ -42,9 +42,14 @@ class System extends Component {
                             Available system commands:
                         </p>
                         <ul>
-                        {data.map((faq) => (
-                            <li key={faq.id}>
-                                {faq.question}
+                        {data.map((sys) => (
+                            <li key={sys.id}>
+                                <p>
+                                    <b>{sys.command}</b>
+                                </p>
+                                <p>
+                                    {sys.description}
+                                </p>
                             </li>
                         ))}
                         </ul>
