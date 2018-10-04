@@ -30,6 +30,13 @@ export const fuseNavigationConfig = [
                 'type' : 'item',
                 'icon' : 'users',
                 'url'  : '/users'
+            },
+            {
+                'id'   : 'system',
+                'title': 'System',
+                'type' : 'item',
+                'icon' : 'system',
+                'url'  : '/system'
             }
         ]
     },

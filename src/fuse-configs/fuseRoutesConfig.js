@@ -5,6 +5,7 @@ import {appsConfigs} from 'main/content/apps/appsConfigs';
 import {pagesConfigs} from 'main/content/pages/pagesConfigs';
 import {ExampleConfig} from 'main/content/example/ExampleConfig';
 import {IntroConfig} from 'main/content/intro/IntroConfig';
+import {SystemConfig} from 'main/content/system/SystemConfig';
 import {UsersConfig} from 'main/content/users/UsersConfig';
 import {FaqPageConfig} from 'main/content/pages/faq/FaqPageConfig';
 import {KnowledgeBasePageConfig} from 'main/content/pages/knowledge-base/KnowledgeBaseConfig';
@@ -16,6 +17,7 @@ const routeConfigs = [
     ComponentsConfig,
     ExampleConfig,
     IntroConfig,
+    SystemConfig,
     UsersConfig,
     FaqPageConfig,
     KnowledgeBasePageConfig
