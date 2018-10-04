@@ -3,9 +3,11 @@ import {withStyles} from '@material-ui/core/styles';
 import axios from 'axios/index';
 import {FusePageSimple} from '@fuse';
 
-import {Button, FormControlLabel, MenuItem, Radio, Typography} from '@material-ui/core';
+import {Button, Typography} from '@material-ui/core';
 import {TextFieldFormsy} from '@fuse';
 import Formsy from 'formsy-react';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
 
 const styles = theme => ({
     layoutRoot: {}
@@ -42,6 +44,22 @@ class System extends Component {
         const {classes} = this.props;
         const {data} = this.state;
         const {canSubmit} = this.state;
+        const styles = {
+          card: {
+            minWidth: 275
+          },
+          title: {
+            marginBottom: 16,
+            fontSize: 14,
+          },
+          pos: {
+            marginBottom: 12,
+          },
+          header: {
+              height: 60,
+              minHeight: 60
+          }
+        };
 
         return (
             <FusePageSimple
@@ -49,33 +67,42 @@ class System extends Component {
                     root: classes.layoutRoot
                 }}
                 header={
-                    <div className="p-24"><h4>Holo</h4></div>
+                    <div className="p-24">
+                        <Typography variant="display1">Holo</Typography>
+                    </div>
                 }
                 contentToolbar={
-                    <div className="px-24"><h4>System</h4></div>
+                    <div className="px-24">
+                        <Typography variant="display1">System Commands</Typography>
+                    </div>
                 }
                 content={
                     <div className="p-24">
-                        <div>
-                            Available system commands:
-                        </div>
-                        <div>
-                            <ul>
-                            {data.map((sys) => (
-                                <li key={sys.id}>
-                                    <p>
-                                        <b>{sys.command}</b>
-                                    </p>
-                                    <p>
-                                        {sys.description}
-                                    </p>
-                                </li>
-                            ))}
-                            </ul>
-                        </div>
+                        <Card className={classes.card}>
+                            <CardContent>
+                              <Typography className={classes.title} color="textSecondary">
+                                  Available system commands:
+                              </Typography>
+                                <ul>
+                                {data.map((sys) => (
+                                    <li key={sys.id}>
+                                        <Typography className={classes.pos}>
+                                            {sys.command}
+                                        </Typography>
+                                        <Typography component="p" color="textSecondary">
+                                            {sys.description}
+                                        </Typography>
+                                        <br/>
+                                    </li>
+                                ))}
+                                </ul>
+                            </CardContent>
+                          </Card>
+
+                        <hr/>
 
                         <div>
-                        <Typography className="h2 mb-24">Example Formsy Form</Typography>
+                            <Typography className="h2 mb-24">Command</Typography>
                         <Formsy
                             onValidSubmit={this.onSubmit}
                             onValid={this.enableButton}
