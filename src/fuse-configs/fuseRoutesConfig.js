@@ -10,11 +10,13 @@ import {UsersConfig} from 'main/content/users/UsersConfig';
 import {FaqPageConfig} from 'main/content/pages/faq/FaqPageConfig';
 import {KnowledgeBasePageConfig} from 'main/content/pages/knowledge-base/KnowledgeBaseConfig';
 import {ComponentsConfig} from 'main/content/components/ComponentsConfig';
+import {ComponentsThirdPartyConfig} from 'main/content/components-third-party/ComponentsThirdPartyConfig';
 
 const routeConfigs = [
     ...appsConfigs,
     ...pagesConfigs,
     ComponentsConfig,
+    ComponentsThirdPartyConfig,
     ExampleConfig,
     IntroConfig,
     SystemConfig,
