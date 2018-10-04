@@ -37,14 +37,7 @@ export const fuseNavigationConfig = [
                 'type' : 'item',
                 'icon' : 'system',
                 'url'  : '/system'
-            },
-            {
-                'id'   : 'formsy',
-                'title': 'Formsy',
-                'type' : 'item',
-                'icon' : 'priority_high',
-                'url'  : '/components-third-party/formsy'
-            },
+            }
         ]
     },
     {

@@ -8,16 +8,30 @@ import {TextFieldFormsy} from '@fuse';
 import Formsy from 'formsy-react';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+import Chip from '@material-ui/core/Chip';
 
 const styles = theme => ({
     layoutRoot: {}
 });
+
+export function command(command)
+{
+    console.log(command);
+    axios.get('/api/sys/' + command.command).then(res => {
+        console.log(res.data);
+        this.setState({commandResult: res.data});
+    });
+
+    //const request = axios.post('/api/sys/command', command);
+    return true;
+}
 
 class System extends Component {
 
     state = {
         canSubmit: false,
         data      : [],
+        commandResult: 'Command Result'
     };
 
     componentDidMount()
@@ -37,6 +51,12 @@ class System extends Component {
 
     onSubmit = (model) => {
         console.info('submit', model);
+        console.log(model);
+        axios.get('/api/sys/' + model.command).then(res => {
+            console.log(res.data);
+            this.setState({commandResult: res.data});
+        });
+//        setInterval(function(){ alert("Hello"); }, 3000);
     };
 
     render()
@@ -44,6 +64,7 @@ class System extends Component {
         const {classes} = this.props;
         const {data} = this.state;
         const {canSubmit} = this.state;
+        const {commandResult} = this.state;
         const styles = {
           card: {
             minWidth: 275
@@ -108,7 +129,7 @@ class System extends Component {
                             onValid={this.enableButton}
                             onInvalid={this.disableButton}
                             ref={(form) => this.form = form}
-                            className="flex flex-col justify-center"
+                            className="flex flex-col"
                         >
 
                             <TextFieldFormsy
@@ -133,6 +154,8 @@ class System extends Component {
                                 }}
                                 required
                             />
+                        <Chip label={commandResult} className={classes.chip} />
+                            <br/>
 
                             <Button
                                 type="submit"
@@ -145,6 +168,7 @@ class System extends Component {
                                 Can submit
                             </Button>
                         </Formsy>
+
                     </div>
 
                 </div>
