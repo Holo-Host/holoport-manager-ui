@@ -9,6 +9,9 @@ import Formsy from 'formsy-react';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Chip from '@material-ui/core/Chip';
+import Avatar from '@material-ui/core/Avatar';
+import FaceIcon from '@material-ui/icons/Face';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
 const styles = theme => ({
     layoutRoot: {}
@@ -121,7 +124,6 @@ class System extends Component {
                             onValid={this.enableButton}
                             onInvalid={this.disableButton}
                             ref={(form) => this.form = form}
-                            className="flex flex-col"
                         >
 
                             <TextFieldFormsy
@@ -145,12 +147,17 @@ class System extends Component {
                                 required
                             />
 
-                            <Chip
+                              <Chip
+                                avatar={
+                                  <Avatar>
+                                    <NavigateNextIcon />
+                                  </Avatar>
+                                }
                                 label={commandResult}
                                 className={classes.chip}
                                 color="secondary"
+                                variant="outlined"
                               />
-
                             <br/>
 
                             <Button
