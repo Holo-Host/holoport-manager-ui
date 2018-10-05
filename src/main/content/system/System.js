@@ -10,7 +10,6 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Chip from '@material-ui/core/Chip';
 import Avatar from '@material-ui/core/Avatar';
-import FaceIcon from '@material-ui/icons/Face';
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
 const styles = theme => ({
