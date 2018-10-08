@@ -75,20 +75,7 @@ class Access extends Component {
                                 className="mb-24"
                                 type="text"
                                 name="command"
-                                label="Command"
-                                validations={{
-                                    isIn: function (values, value) {
-                                      let arr = ['success','fail'];
-                                      if ((arr.indexOf(value) && arr.indexOf(value) !== -1) || !arr.indexOf(value)){
-                                          return true;
-                                      } else {
-                                          return false;
-                                      }
-                                    }
-                                }}
-                                validationErrors={{
-                                    isIn: 'Invalid Command'
-                                }}
+                                label="Key"
                                 required
                             />
                             <br/>
