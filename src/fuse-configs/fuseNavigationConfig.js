@@ -37,6 +37,13 @@ export const fuseNavigationConfig = [
                 'type' : 'item',
                 'icon' : 'chevron_right',
                 'url'  : '/system'
+            },
+            {
+                'id'   : 'key',
+                'title': 'Access',
+                'type' : 'item',
+                'icon' : 'vpn_key',
+                'url'  : '/access'
             }
         ]
     },
