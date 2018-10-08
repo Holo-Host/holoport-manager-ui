@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import {withStyles} from '@material-ui/core/styles';
-import axios from 'axios/index';
 import {FusePageSimple} from '@fuse';
 
 import {Button} from '@material-ui/core';
 import {Typography} from '@material-ui/core';
 import {Paper} from '@material-ui/core';
+import {Divider} from '@material-ui/core';
 
 import {TextFieldFormsy} from '@fuse';
 import Formsy from 'formsy-react';
@@ -25,7 +25,6 @@ const styles = theme => ({
 class Access extends Component {
 
     state = {
-        data      : [],
         result: 'disabled'
     };
 
@@ -71,6 +70,8 @@ class Access extends Component {
                             onInvalid={this.disableButton}
                             ref={(form) => this.form = form}
                         >
+                            <Divider light />
+                            <br/>
                             <TextFieldFormsy
                                 className="mb-24"
                                 type="text"
