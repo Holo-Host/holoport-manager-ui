@@ -35,7 +35,6 @@ class Access extends Component {
 
     render()
     {
-        const {data} = this.state;
         const {result} = this.state;
         const {classes} = this.props;
 
