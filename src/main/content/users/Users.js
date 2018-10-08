@@ -15,9 +15,14 @@ class Users extends Component {
 
     componentDidMount()
     {
+        axios.get('/api/users').then(res => {
+            this.setState({data: res.data});
+        });
+        /*
         axios.get('http://localhost:8000/users/').then(res => {
             this.setState({data: res.data});
         });
+        */
     }
 
     render()

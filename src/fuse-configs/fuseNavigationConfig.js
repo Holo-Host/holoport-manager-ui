@@ -28,7 +28,7 @@ export const fuseNavigationConfig = [
                 'id'   : 'users',
                 'title': 'Users',
                 'type' : 'item',
-                'icon' : 'users',
+                'icon' : 'person',
                 'url'  : '/users'
             },
             {
