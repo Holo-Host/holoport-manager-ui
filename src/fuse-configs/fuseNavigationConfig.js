@@ -35,7 +35,7 @@ export const fuseNavigationConfig = [
                 'id'   : 'system',
                 'title': 'System',
                 'type' : 'item',
-                'icon' : 'system',
+                'icon' : 'chevron_right',
                 'url'  : '/system'
             }
         ]
