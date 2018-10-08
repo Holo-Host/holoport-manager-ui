@@ -52,7 +52,7 @@ class Access extends Component {
                 }
                 contentToolbar={
                     <div className="px-24">
-                        <Typography variant="display1">System Commands</Typography>
+                        <Typography variant="display1">Access</Typography>
                     </div>
                 }
                 content={
