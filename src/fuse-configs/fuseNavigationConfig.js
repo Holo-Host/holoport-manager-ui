@@ -82,18 +82,6 @@ export const fuseNavigationConfig = [
                 'url'  : '/pages/coming-soon'
             },
         ]
-    },
-    {
-        'id'      : 'security',
-        'title'   : 'Security',
-        'type'    : 'group',
-        'icon'    : 'details',
-    },
-    {
-        'id'      : 'hchc',
-        'title'   : 'HCHC',
-        'type'    : 'group',
-        'icon'    : 'details',
     }
 
 ];
