@@ -3,38 +3,41 @@ import {withStyles} from '@material-ui/core/styles';
 import axios from 'axios/index';
 import {FusePageSimple} from '@fuse';
 
-import {Button, Typography} from '@material-ui/core';
+import {Button} from '@material-ui/core';
+import {Typography} from '@material-ui/core';
+import {Paper} from '@material-ui/core';
+
 import {TextFieldFormsy} from '@fuse';
 import Formsy from 'formsy-react';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 
 const styles = theme => ({
-    layoutRoot: {}
+    layoutRoot: {},
+    root: {
+      ...theme.mixins.gutters(),
+      paddingTop: theme.spacing.unit * 2,
+      paddingBottom: theme.spacing.unit * 2,
+    },
 });
+
 
 class Access extends Component {
 
     state = {
         data      : [],
+        result: 'disabled'
     };
-
-    componentDidMount()
-    {
-        /*
-        axios.get('/api/sys').then(res => {
-            this.setState({data: res.data});
-        });
-        */
-    }
 
     onSubmit = (model) => {
         console.info('submit', model);
+        this.setState({result: 'enabled'});
     };
 
     render()
     {
         const {data} = this.state;
+        const {result} = this.state;
         const {classes} = this.props;
 
         return (
@@ -75,6 +78,9 @@ class Access extends Component {
                                 label="Key"
                                 required
                             />
+                            <Paper className={classes.root} elevation={1}>
+                                Access {result}
+                            </Paper>
                             <br/>
                             <Button
                                 type="submit"
